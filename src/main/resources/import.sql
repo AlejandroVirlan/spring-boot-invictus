@@ -1,5 +1,5 @@
 /* Populate tables */
-INSERT INTO usuarios (username, password, email, enabled, creado) VALUES ('Usuario1', '$10$dQ6Shj1Aa1ur6sZZDE7hCOvN9ppeH5GUuPCg/lYi.9wa/AbeQqp4u', 'email@gmail.com', 1, NOW());
+INSERT INTO usuarios (username, password, email, enabled, creado) VALUES ('Usuario1', '$2a$10$0yJsCZ/rXocVKi.wXB4XBOr2O..63QHi3M92QcvpQSR0JnXtRQa2K', 'email@gmail.com', 1, NOW());
 INSERT INTO socios (dni, usuario_id, nombre, apellido1, apellido2, movil, foto) VALUES('11111111A', 1 ,'Alejandro', 'Virlán', 'Burgos', '666666666', 'foto.jpg');
 
 INSERT INTO roles(nombre_rol) VALUES ('ROLE_ADMIN');
