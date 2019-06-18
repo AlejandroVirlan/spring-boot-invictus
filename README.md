@@ -23,6 +23,14 @@ a esta API realizada con Spring Framework 5.
     * Reservas
     * Transacciones
 
+### REQUISITOS
+---
+Para que el proyecto pueda ejecutarse y no le falte ninguna dependencia, hay que tener instalado:
+
+* **[JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).**
+* **[Spring Tools 4](https://spring.io/tools).**
+* **[Lombok](https://projectlombok.org/download).**
+
 ### INSTRUCCIONES
 ---
 Antes de ejecutar el proyecto, debe de crearse la base de datos.
@@ -38,20 +46,26 @@ por los propios que tenga en su ordenardor.
 
 Valores a editar (señalados en **negrita**) :
 
-Puerto del servidor  
-server.port:**8094** 
-
 Nombre de usuario de la base de datos MySQL  
 spring.datasource.username=**root**  
 
 Contraseña de la base de datos MySQL  
 spring.datasource.password=**admin**  
 
+Opción para crear la base de datos, insertar registros, actualizar registros  
+spring.jpa.hibernate.ddl-auto=**update**
+
+NOTA: Si es la primera vez que se ejecuta el proyecto, hay que cambiar la opción **update** de la siguiente línea **spring.jpa.hibernate.ddl-auto** por la opción **create**. Una vez que se haya ejecutado, cambiar a la opción **update**
+para mantener los registros y actualizarlos.
+
 Una vez configurado todos los parámetros necesarios para que funcione la aplicación, puede ejecutarla  
 y comenzar a hacer pruebas con una herramienta que permite realizar peticiones HTTP a cualquier API,  
 como por ejemplo ["_Postman_"](https://www.getpostman.com/).
 
-Al ejecutarla, se creará la base de datos con registros de ejemplo, la contraseña para ambos socios es "12345678".
+Al ejecutarla, se creará la base de datos con registros de ejemplo:
+
+* usuario: Usuario1, contraseña: 12345678. Roles (Administrador y usuario).
+* usuario: Usuario2, contraseña: 12345678. Roles (Usuario).
 
 ### PRUEBAS
 ---
